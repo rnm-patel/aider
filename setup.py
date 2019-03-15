@@ -11,7 +11,7 @@ with open('aider/requirements.txt') as fp:
 setup(
     name = 'aider',         
     packages = ['aider'],
-    version = '0.1',      
+    version = '0.2',      
     license='MIT',        
     description = 'general utilities',     
     long_description = open('README.rst').read(),
