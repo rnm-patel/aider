@@ -2,11 +2,11 @@ from distutils.core import setup
 
 # reading requirements.txt file for install_requires field
 packages = []
-with open('aider/requirements.txt') as fp:
+with open('requirements.txt') as fp:
     for line in fp:
-        line = line.strip()
+        line = line.replace(',', '').strip()
         if line.startswith('#'): continue
-        packages.append(line)
+        if line != '': packages.append(line)
 
 setup(
     name = 'aider',         
@@ -20,6 +20,7 @@ setup(
     url = 'https://github.com/rnm-patel/aider',  
     download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',
     keywords = ['utility', 'generic', 'log', 'config', 'calendar'],
+    include_package_data=True,
     install_requires=packages,
     classifiers=[
         'Development Status :: 3 - Alpha',   
