@@ -1,7 +1,5 @@
 from distutils.core import setup
 
-name = 'utils'
-
 # reading readme flie for assigning it as long description
 text = ''
 with open('README.md') as fp:
@@ -9,14 +7,14 @@ with open('README.md') as fp:
 
 # reading requirements.txt file for install_requires field
 packages = []
-with open(name + '/requirements.txt') as fp:
+with open('requirements.txt') as fp:
     for line in fp:
         line = line.strip()
         if line.startswith('#'): continue
         packages.append(line)
 
 setup(
-    name = name,         
+    name = 'utils',         
     packages = ['utils'],
     version = '0.1',      
     license='MIT',        
