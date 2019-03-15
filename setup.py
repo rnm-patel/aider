@@ -1,13 +1,8 @@
 from distutils.core import setup
 
-# reading readme flie for assigning it as long description
-text = ''
-with open('README.md') as fp:
-    text = fp.read()
-
 # reading requirements.txt file for install_requires field
 packages = []
-with open('requirements.txt') as fp:
+with open('aider/requirements.txt') as fp:
     for line in fp:
         line = line.strip()
         if line.startswith('#'): continue
@@ -15,11 +10,11 @@ with open('requirements.txt') as fp:
 
 setup(
     name = 'aider',         
-    packages = ['utils'],
+    packages = ['aider'],
     version = '0.1',      
     license='MIT',        
     description = 'general utilities',     
-    long_description = text,
+    long_description = open('README.rst').read(),
     author = 'Rajat Movaliya',              
     author_email = 'rajatmovaliya@gmail.com',     
     url = 'https://github.com/user/reponame',  
