@@ -1,4 +1,4 @@
-from distutils.core import setup
+from distutils.core import setup, find_packages
 
 # reading requirements.txt file for install_requires field
 packages = []
@@ -10,7 +10,7 @@ with open('requirements.txt') as fp:
 
 setup(
     name = 'aider',         
-    packages = ['aider'],
+    packages = find_packages(),
     version = '0.2.1',      
     license='MIT',        
     description = 'general utilities',     
@@ -22,6 +22,9 @@ setup(
     keywords = ['utility', 'generic', 'log', 'config', 'calendar'],
     include_package_data=True,
     install_requires=packages,
+     project_urls={
+        'Source Code': 'https://github.com/rnm-patel/aider',
+    },
     classifiers=[
         'Development Status :: 3 - Alpha',   
         'Intended Audience :: Developers',      
