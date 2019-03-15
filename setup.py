@@ -14,7 +14,7 @@ with open('requirements.txt') as fp:
         packages.append(line)
 
 setup(
-    name = 'utils',         
+    name = 'aider',         
     packages = ['utils'],
     version = '0.1',      
     license='MIT',        
