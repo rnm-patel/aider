@@ -17,7 +17,7 @@ setup(
     long_description = open('README.rst').read(),
     author = 'Rajat Movaliya',              
     author_email = 'rajatmovaliya@gmail.com',     
-    url = 'https://github.com/user/reponame',  
+    url = 'https://github.com/rnm-patel/aider',  
     download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',
     keywords = ['utility', 'generic', 'log', 'config', 'calendar'],
     install_requires=packages,
